@@ -155,7 +155,7 @@ def load_pbp_data(seasons):
     try:
         pbp = nfl.import_pbp_data(seasons)
         return pbp
-    except Exception as e:
+    except Exception as str(e):
         st.error(f"Error loading play-by-play data: {e}")
         return None
 
@@ -165,7 +165,7 @@ def load_roster_data(seasons):
     try:
         rosters = nfl.import_seasonal_rosters(seasons)
         return rosters
-    except Exception as e:
+    except Exception as str(e):
         st.error(f"Error loading roster data: {e}")
         return None
 
